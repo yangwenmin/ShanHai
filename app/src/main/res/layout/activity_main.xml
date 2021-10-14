@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_shanhai"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
+
+    <include layout="@layout/top_navigation"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/listview_line"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--视频-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="162dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_solid_gray_5">
+
+                <ImageView
+                    android:id="@+id/main_img_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/main_tv_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/shape_solid_bantouming"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="2dp"
+                    android:text="视频教学"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size5"/>
+            </RelativeLayout>
+
+
+            <!--小说-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="162dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_solid_gray_5">
+
+                <ImageView
+                    android:id="@+id/main_img_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/main_tv_book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/shape_solid_bantouming"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="2dp"
+                    android:text="文章攻略"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size5"/>
+            </RelativeLayout>
+
+            <!--图片-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="162dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_solid_gray_5">
+
+                <ImageView
+                    android:id="@+id/main_img_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/main_tv_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/shape_solid_bantouming"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="2dp"
+                    android:text="原画壁纸"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size5"/>
+            </RelativeLayout>
+
+            <!--游戏-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="162dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_solid_gray_5">
+
+                <ImageView
+                    android:id="@+id/main_img_game"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/main_tv_game"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/shape_solid_bantouming"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="2dp"
+                    android:text="游戏下载"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size5"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

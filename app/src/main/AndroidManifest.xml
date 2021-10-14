@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.shanhai">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!--//允许应用读写用户的外部存储器-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeCom"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--  ShowActivity  MainActivity-->
+
+        <!--视频分类-->
+        <activity
+            android:name=".func_video.VideoCategoryActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="portrait"/>
+        <!--视频列表-->
+        <activity
+            android:name=".func_video.VideoListActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="portrait"/>
+        <!--为您推荐-->
+        <activity
+            android:name=".func_video.haoping.VideoRandomActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="portrait"/>
+        <!--大众好评-->
+        <activity
+            android:name=".func_video.haoping.VideoHaopingActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="portrait"/>
+        <!--视频播放-->
+        <activity
+            android:name=".func_video.player.PlayerActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="landscape"/>
+        <!--web视频播放-->
+        <activity
+            android:name=".func_video.player.WebPlayerActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="landscape"/>
+
+        <!--壁纸-->
+        <activity
+            android:name=".func_game.MsgWebActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="portrait"/>
+
+        <!--演示新技术-->
+        <activity
+            android:name=".func_other.ShowActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="portrait"/>
+
+    </application>
+
+</manifest>

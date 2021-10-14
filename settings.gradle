@@ -1,0 +1,1 @@
+include ':app', ':yass-res', ':yass-core'

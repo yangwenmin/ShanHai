@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Copyright (c) 2013 The CCP project authors. All Rights Reserved.
+ 
+   Use of this source code is governed by a Beijing Speedtong Information Technology Co.,Ltd license
+   that can be found in the LICENSE file in the root of the web site.
+ 
+    				http://www.yuntongxun.com
+ 
+   An additional intellectual property rights grant can be found
+   in the file PATENTS.  All contributing project authors may
+   be found in the AUTHORS file in the root of the source tree.
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CCPGroupListItem">
+
+    <ImageView
+        android:id="@+id/item_img_groupitem_avatar_iv"
+        android:layout_width="@dimen/NormalAvatarSize"
+        android:layout_height="@dimen/NormalAvatarSize"
+        android:layout_marginLeft="12.3dp"
+        android:background="@null" />
+
+    <et.tsingtaopad.im.avaimage.groupimageview.NineGridImageView
+        android:id="@+id/item_img_groudIcon9"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#eeeeee"
+        android:visibility="gone"
+        android:layout_marginLeft="12.3dp"/>
+
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="8.0dip">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="@dimen/font_size2"
+            android:layout_marginTop="-1.5dip"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <!--群组名称-->
+            <TextView
+                android:id="@+id/item_img_group_name"
+                style="@style/CCPFontTitleInList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:tag="name_tv"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/font_size4" />
+
+            <!--群组id gone-->
+            <TextView
+                android:id="@+id/item_img_group_id"
+                style="@style/CCPFontTipInList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.5dip"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:visibility="gone"
+                android:tag="account"
+                android:text="account"
+                android:textColor="#ff888888"
+                android:textSize="@dimen/font_size4" />
+        </LinearLayout>
+
+        <include layout="@layout/include_black_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

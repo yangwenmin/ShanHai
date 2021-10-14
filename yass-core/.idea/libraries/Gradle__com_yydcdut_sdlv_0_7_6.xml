@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.yydcdut:sdlv-0.7.6">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sdlv-0.7.6.aar/fe8134682f5654d4d9717b4b1b53ea05/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sdlv-0.7.6.aar/fe8134682f5654d4d9717b4b1b53ea05/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yydcdut/sdlv/0.7.6/ec31dbd9576ccfa309ee6dbd5e70753a749f3dbf/sdlv-0.7.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

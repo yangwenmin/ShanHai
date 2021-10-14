@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/pijiu_11" android:duration="150" />
+    <item android:drawable="@drawable/pijiu_12" android:duration="150"></item>
+    <item android:drawable="@drawable/pijiu_13" android:duration="150"></item>
+    <item android:drawable="@drawable/pijiu_14" android:duration="150"></item>
+    <item android:drawable="@drawable/pijiu_15" android:duration="150"></item>
+    <item android:drawable="@drawable/pijiu_16" android:duration="150"></item>
+    <item android:drawable="@drawable/pijiu_17" android:duration="150"></item>
+    <item android:drawable="@drawable/pijiu_18" android:duration="150"></item>
+    <item android:drawable="@drawable/pijiu_19" android:duration="150"></item>
+    <item android:drawable="@drawable/pijiu_20" android:duration="150"></item>
+    <item android:drawable="@drawable/pijiu_21" android:duration="150"></item>
+    <item android:drawable="@drawable/pijiu_22" android:duration="150"></item>
+    <item android:drawable="@drawable/pijiu_23" android:duration="150"></item>
+    <item android:drawable="@drawable/pijiu_24" android:duration="150"></item>
+
+</animation-list>

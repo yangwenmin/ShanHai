@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 通用 -->
+    <string name="tongyong_qishi">温馨提示</string>
+
+    <!-- 经销商开发 -->
+    <string name="agencykf_details">经销商开发</string>
+    <string name="agencykf_agencyselect">选择</string>
+    <string name="agencykf_agencyname">经销商名称</string>
+    <string name="agencykf_agencyn">经销商名称:</string>
+    <string name="agencykf_contact">法定代表人</string>
+    <string name="agencykf_mobile">联系电话</string>
+    <string name="agencykf_address">仓库地址</string>
+    <string name="agencykf_persion">人员</string>
+    <string name="agencykf_business">经营状况</string>
+    <string name="agencykf_isone">是否数一数二经销商</string>
+    <string name="agencykf_coverterms">覆盖终端</string>
+    <string name="agencykf_supplyterms">直供终端</string>
+    <string name="agencykf_passdate">达成时间</string>
+    <string name="agencykf_area">仓库面积</string>
+    <string name="agencykf_money">资金</string>
+    <string name="agencykf_carnum">车辆配送</string>
+    <string name="agencykf_productname">销售产品</string>
+    <string name="agencykf_kfdata">开发时间</string>
+    <string name="agencykf_unit_mxm">平方米</string>
+    <string name="agencykf_unit_money">万元</string>
+    <string name="agencykf_unit_l">辆</string>
+    <string name="agencykf_product_product">产品之间以逗号隔开(不超过500汉字)</string>
+    <string name="agencykf_agencyname_more">不能超过50汉字</string>
+    <string name="agencykf_agencymaohao">:</string>
+
+    <string name="agencykf_add_noname">经销商名称未填写</string>
+    <string name="agencykf_add_marename">经销商名称不能超过50汉字</string>
+    <string name="agencykf_add_nocontact">法定人未填写</string>
+    <string name="agencykf_add_morecontact">法定人不能超过50汉字</string>
+    <string name="agencykf_add_area">仓库地址不能超过100汉字</string>
+    <string name="agencykf_add_product">销售产品不能超过500汉字</string>
+    <string name="agencykf_add_address">不能超过100汉字</string>
+    <string name="agencykf_add_coverterm">终端之间以逗号隔开</string>
+
+    <string name="agencykf_delete">是否删除此条经销商记录</string>
+    <string name="agencykf_isdelete">确定要删除此经销商记录</string>
+    <string name="agencykf_all">经销商详情</string>
+    <string-array name="isyesno">
+        <item>请选择</item>
+        <item>是</item>
+        <item>否</item>
+    </string-array>
+
+    <!-- 终端进货台账 -->
+    <string name="termtz_details">终端进货台账录入</string>
+    <string name="termtz_select">选择经销商</string>
+    <string name="termtz_sure">确定查询</string>
+
+    <string name="termtz_termid">编号</string>
+    <string name="termtz_termname">名称</string>
+    <string name="termtz_sequence">顺序</string>
+    <string name="termtz_grid">定格</string>
+    <string name="termtz_route">路线</string>
+    <string name="termtz_address">地址</string>
+    <string name="termtz_people">关键人</string>
+    <string name="termtz_phone">电话</string>
+
+    <string name="termtz_dialog_pro">品种</string>
+    <string name="termtz_dialog_time">选择进货时间</string>
+    <string name="termtz_dialog_jinhuo">进货量</string>
+
+    <string name="dialog_msg_sync">正在同步终端数据</string>
+    <string name="tztermlist_search_hit">输入终端名称</string>
+    <string name="termtz_spin_prompt">请选择定格 </string>
+    <string-array name="termtz_grid_prompt">
+        <item>请选择</item>
+    </string-array>
+    <string name="linelist_gridroute">选择线路:</string>
+
+    <!--     tag -->
+    <item name="tag_viewholder" type="id"></item>
+    <item name="tag_listdata" type="id"></item>
+    <item name="tag_viewclick" type="id"></item>
+
+    <string name="dialog_msg_overworkplan">    确定上传周计划    </string>
+
+    <string-array name="isvistguolv">
+        <item>全部</item>
+        <item>今天已拜访过</item>
+        <item>今天未拜访过</item>
+    </string-array>
+
+    <!-- 关于系统版本特性 -->
+    <string name="syssetting_tv_text1">促销员可以在TT-SPS内进行移动定位打开，定位签到，以及请假申请。</string>
+    <string name="syssetting_tv_text11">促销主管可以在APP内审核促销员的请假申请，异常考勤申请。</string>
+    <string name="syssetting_tv_text2">可以创建抽奖、买赠等多个类型的促销活动，为促销员的终端活动进行智能化赋能。</string>
+    <string name="syssetting_tv_text21">促销员在系统内，可以随时上报终端信息和动销数据，主管通过TT-SPS系统可以及时了解终端店的信息。</string>
+    <string name="syssetting_tv_text3">根据收据业务数据，系统自动生成业务分析报表，方便促销员、促销员主管以及相关人员及时了解促销业务的进展。</string>
+
+    <string name="syssetting_tv_text4">人事考勤管理移动化</string>
+    <string name="syssetting_tv_text5">活动和动销管理在线化</string>
+    <string name="syssetting_tv_text6">数据分析自动化</string>
+    <string name="syssetting_tv_text7">终端进货台账</string>
+
+    <!-- 存储文件文件夹 -->
+    <string name="Files">Files</string>
+
+    <!-- 图像文件夹 -->
+    <string name="Image">Image</string>
+    <!-- 缩略图文件夹 -->
+    <string name="Thumbnail">Thumbnail</string>
+    <string name="camera_msg_progress">正在处理图片,请稍后</string>
+    <!-- 视频文件夹 -->
+    <string name="Video">Video</string>
+    <string name="album_enter_select">选择</string>
+    <string name="api_cancel">取消</string>
+    <string name="album_photo_select_tip">项</string>
+    <string name="album_phoot_select_all">全选</string>
+    <string name="album_phoot_unselect_all">取消全选</string>
+    <string name="album_title">我的相册</string>
+    <string name="pgcommon_share">分享</string>
+    <string name="common_cut">移动</string>
+    <string name="common_delete">删除</string>
+    <string name="common_edit">编辑</string>
+    <string name="album_message">图片&amp;视频</string>
+
+    <!-- 订单明细 -->
+    <string name="operation_orders">当日订单查询</string>
+    <string name="operation_zhuguan">主管系统</string>
+    <string name="check_grid">定格/线路</string>
+    <string name="check_term">终端详情</string>
+    <string name="check_visit">拜访信息</string>
+    <string name="check_agency">供货商</string>
+    <string name="text_get">查询</string>
+    <string name="orders_termname"> 终端名称 </string>
+    <string name="orders_bigarea">    大   区    </string>
+    <string name="orders_areaname">    二级区域    </string>
+    <string name="orders_gridname">    定   格    </string>
+    <string name="orders_linename">    路   线    </string>
+    <string name="orders_terminalkey">    终端编码    </string>
+    <string name="orders_contact">    终端联系人    </string>
+    <string name="orders_mobile">    联系电话    </string>
+    <string name="orders_address">    地   址    </string>
+    <string name="orders_visitperson">    拜访对象    </string>
+    <string name="orders_visitdate">    拜访时间    </string>
+    <string name="orders_agencyname">    供货商    </string>
+    <string name="orders_productname">    产  品    </string>
+    <string name="orders_prevnum">    订单量    </string>
+
+    <!-- 扫描二维码 -->
+    <string name="scan_text">小样，想扫二维码，还不对准了！！</string>
+    <string name="title_activity_zxing">ZxingActivity</string>
+    <string name="title_activity_result">ResultActivity</string>
+
+    <!-- 终端进货台账查询 -->
+    <string name="termtzsearch_agency">经销商</string>
+    <string name="termtzsearch_ceshiagency">测试经销商</string>
+    <string name="termtzsearch_time">进货时间</string>
+    <string name="termtzsearch_start_time">2015-11-01</string>
+    <string name="termtzsearch_end_time">2017-11-29</string>
+    <string name="termtzsearch_isxieyi">协议店</string>
+
+    <!-- 路线卡查询 -->
+    <string name="linecardsearch_grid">定格</string>
+    <string name="linecardsearch_line">路线: </string>
+    <string name="linecardsearch_termname">终端名称: </string>
+    <string name="linecardsearch_intermname">输入名称</string>
+    <string name="linecardsearch_state">铺货状态</string>
+    <string name="linecardsearch_vivification">产品生动化</string>
+    <string name="linecardsearch_frozen">冰冻化</string>
+    <string name="linecardsearch_props">道具生动化</string>
+    <string name="linecardsearch_supply">供货关系</string>
+    <string name="linecardsearch_jinhuo">进货价</string>
+    <string name="linecardsearch_lingshou">零售价</string>
+    <string name="linecardsearch_store">库存</string>
+
+    <!-- 查指标 -->
+    <string name="checkindex_tv_group">产品组合是否达标: </string>
+    <string name="checkindex_tv_hz">合作执行是否到位: </string>
+    <string name="checkindex_tv_zyl">我品单店占有率: </string>
+    <string name="checkindex_tv_ps">是否高质量配送: </string>
+    <string name="checkindex_tv_freshleve">产品新鲜度是否达标: </string>
+    <string name="checkindex_tv_sdhishg">生动化是否合格: </string>
+
+    <!-- 督导 漏店补录 -->
+    <string name="default_input">请输入</string>
+    <string name="termadd_star">*</string>
+    <string name="termadd_title">新增终端</string>
+    <string name="termadd_termcode">终端编码：</string>
+    <string name="termadd_areaid">所属区域：</string>
+    <string name="termadd_gridid">所属定格：</string>
+    <string name="termadd_belongline">所属线路：</string>
+    <string name="termadd_termname">终端名称：</string>
+    <string name="termadd_level">终端等级：</string>
+    <string name="termadd_prov">省：</string>
+    <string name="termadd_city">市：</string>
+    <string name="termadd_country">县：</string>
+    <string name="termadd_address">地址：</string>
+    <string name="termadd_person">联系人：</string>
+    <string name="termadd_tel">电话：</string>
+    <string name="termadd_sequence">拜访顺序：</string>
+    <string name="termadd_cycle">拜访周期：</string>
+    <string name="termadd_hvolume">高档容量：</string>
+    <string name="termadd_mvolume">中档容量：</string>
+    <string name="termadd_pvolume">普档容量：</string>
+    <string name="termadd_lvolume">低档容量：</string>
+    <string name="termadd_totalvolume">总容量：</string>
+    <string name="termadd_areatype">区域类型：</string>
+    <string name="termadd_sellchannel">销售渠道：</string>
+    <string name="termadd_mainchannel">主渠道：</string>
+    <string name="termadd_minorchannel">次渠道：</string>
+    <string name="termadd_visitperson">拜访对象：</string>
+    <string name="termadd_msg_invaltermname">终端名称不能为空</string>
+    <string name="termadd_msg_invalbelogline">请选择终端所属线路</string>
+    <string name="termadd_msg_invaltermlevel">请选择终端所属等级</string>
+    <string name="termadd_msg_invalprov">请选择终端所属省份</string>
+    <string name="termadd_msg_invalcity">请选择终端所属的市</string>
+    <string name="termadd_msg_invalcountry">请选择终端所属的区县</string>
+    <string name="termadd_msg_invalareatype">请选择区域类型</string>
+    <string name="termadd_msg_invaladdress">请输入终端地址</string>
+    <string name="termadd_msg_invalcontact">请输入联系人姓名</string>
+    <string name="termadd_msg_invalmobile">请输入联系人电话</string>
+    <string name="termadd_msg_invalmobilelength">电话长度不能超过30位</string>
+    <string name="termadd_msg_minmobilelength">电话长度不能小于6位</string>
+    <string name="termadd_msg_invalsequence">请输入拜访顺序</string>
+    <string name="termadd_msg_invalsellchannel">请选择终端的销售渠道</string>
+    <string name="termadd_msg_invalmainchannel">请选择终端的主渠道</string>
+    <string name="termadd_msg_invalminorchannel">请选择终端的次渠道</string>
+    <string name="termadd_msg_wait">请稍候,正在加载打招呼数据</string>
+    <string name="termadd_msg_repeat">相同路线、相同名称、相同类型的终端、一天只能新建一次</string>
+    <string name="termadd_msg_addsuccess">新增终端成功</string>
+    <string name="termadd_msg_syncsuccess">新增终端上传成功</string>
+    <string name="termadd_msg_syncfail">新增终端上传失败</string>
+    <string name="termadd_msg_addfail">新增终端失败F</string>
+    <string name="termadd_msg_addError">新增终端失败E</string>
+    <string name="termadd_unit_cycle">天/次</string>
+    <string name="termadd_unit_volume">件/年</string>
+
+    <!--业代 首页-->
+    <string name="yd_home_visittime">近七日单店拜访时长＞60分钟或＜1分钟的终端家数</string>
+
+    <string name="title_notification_bar">当前步数:%1$s</string>
+
+
+    <!--晨会录入-->
+    <string name="operation_meetingrecord_fail">会议记录不能为空</string>
+    <string name="operation_participant_fail">参会人不能为空</string>
+    <string name="operation_compere_fail">主持人不能为空</string>
+    <string name="operation_startdate_fail">开始时间不能为空</string>
+    <string name="operation_enddate_fail">结束时间不能为空</string>
+    <string name="operation_back_fail">后台成功接收,但返回的数据为null</string>
+
+
+    <!--督导 会议记录 时间选择 2019年06月19日13:56:07-->
+    <string name="cancel">取消</string>
+    <string name="title">请选择时间</string>
+    <string name="confirm">确定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+
+    <string name="select_date">选择日期</string>
+    <string name="current_date">当前日期</string>
+    <string name="select_time">选择时间</string>
+    <string name="current_time">当前时间</string>
+
+
+    <!--终端夹-->
+    <string name="termcart_tv_termtype">终端状态筛选</string>
+    <string name="termcart_tv_softradiobutton0">默认排序</string>
+    <string name="termcart_tv_softradiobutton1">终端地址</string>
+    <string name="termcart_tv_softradiobutton2">业代拜访时间</string>
+
+
+    <!--二维码-->
+    <string name="qr_code_text">二维码</string>
+    <string name="scan_qr_code_warn">将二维码放入框内，即可自动扫描</string>
+    <string name="scan_qr_code_from_photo_wrong">没有找到二维码</string>
+    <string name="album_text">相册</string>
+
+    <string name="identify_qr">识别二维码</string>
+    <string name="save_pic">保存图片</string>
+
+    <string name="fancy_qr_code_theme_name_yellow">黄</string>
+    <string name="fancy_qr_code_theme_name_green">绿</string>
+    <string name="fancy_qr_code_theme_name_red">红</string>
+    <string name="fancy_qr_code_theme_name_blue">蓝</string>
+    <string name="fancy_qr_code_theme_name_purple">紫</string>
+    <string name="fancy_qr_code_theme_name_black">黑</string>
+
+
+    <string name="saledata">动销上报</string>
+    <string name="minedata_route">动销上报</string>
+    <string name="promotion_route">活动</string>
+
+    <string name="minedata">我品信息上报</string>
+    <string name="minedata_buy">我品进货</string>
+    <string name="minedata_sell">我品销售</string>
+    <string name="minedata_stock">我品库存</string>
+    <string name="minedata_price">我品价格</string>
+    <string name="minedata_promotion">我品生动化</string>
+
+    <string name="cmpdata">竞品信息上报</string>
+    <string name="cmpdata_buy">竞品进货</string>
+    <string name="cmpdata_sell">竞品销售</string>
+    <string name="cmpdata_stock">竞品库存</string>
+    <string name="cmpdata_price">竞品价格</string>
+    <string name="cmpdata_promotion">竞品活动</string>
+
+    <string name="personmanage_invite">选择部门或小组</string>
+    <string name="personmanage_leaveoff">离职管理</string>
+    <string name="personmanage_check">入职审核</string>
+    <string name="personmanage_reset">帐号重置</string>
+
+    <string name="terminallist">终端列表</string>
+    <string name="personlist">人员列表</string>
+
+
+    <string name="sellapprove">动销审批</string>
+
+    <string name="guanlianterm">请联系主管绑定终端</string>
+    <string name="picwall_title">照片墙</string>
+
+
+    <!--促销员活动配置-->
+    <string name="promotion_msg_promname">活动名称不能为空</string>
+    <string name="promotion_msg_starttime">起始日期不能为空</string>
+    <string name="promotion_msg_endtime">结束日期不能为空</string>
+    <string name="promotion_msg_weeks">活动日不能为空</string>
+    <string name="promotion_msg_promtype">请选择玩法</string>
+    <string name="promotion_msg_days">请选择正确的活动日</string>
+
+    <string name="addward_msg_prizenum">请先新增奖项</string>
+    <string name="addward_msg_prizeaward">请先为奖项配置奖品</string>
+    <string name="addward_msg_eggnum">请选择金蛋数</string>
+    <string name="addward_msg_error">奖品太多了,请减少</string>
+
+
+    <!--分析 进销存查询-->
+    <string name="psstock_msg_starttime">开始时间不能为空</string>
+    <string name="psstock_msg_endtime">结束时间不能为空</string>
+    <string name="psstock_msg_termnum">请先选择终端</string>
+    <string name="psstock_msg_pronum">请先选择产品</string>
+    <string name="psstock_msg_areasize">请先选择区域</string>
+
+    <!--促销员 选择终端 打卡-->
+    <string name="sign_select_termname">选择打卡终端</string>
+
+    <string name="add_prize_name">请输入奖品名称</string>
+    <string name="add_prize_pro">请选择关联产品</string>
+    <string name="add_prize_num">请输入奖品数量</string>
+    <string name="add_prize_zero">奖品数量需大于0</string>
+
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+     android:shareInterpolator="false"
+     android:duration="@integer/animation_default_duration">
+
+    <scale
+        android:fromXScale="100%"
+        android:toXScale="95%"
+        android:fromYScale="100%"
+        android:toYScale="95%"
+        android:pivotX="50%"
+        android:pivotY="50%"/>
+
+    <alpha
+        android:fromAlpha="1"
+        android:toAlpha="0"/>
+
+</set>
+
+    <!-- android:fromAlpha="0.0" 动画的起始的透明度 -->
+    <!-- android:toAlpha="1.0"  动画的结束时候的透明度 -->
+
+    <!-- android:interpolator="@android:anim/linear_interpolator" -->
+    <!-- 在动画的以均匀的速率改变 -->
+
+    <!-- android:startOffset="300" -->
+    <!-- 设置动画执行的时间间隔 -->
+
+    <!-- android:repeatCount="" -->
+    <!-- 设置动画开重复的次数 -->
+
+    <!--
+            fillBefore是指动画结束时画面停留在此动画的第一帧; 默认值为true
+            fillAfter是指动画结束是画面停留在此动画的最后一帧。默认值为false
+
+            <set android:fillAfter="true" android:fillBefore="false">
+            动画结束 停留在最后一帖
+
+            <set android:fillAfter="false" android:fillBefore="true">
+            动画结束停留在第一帖
+        -->
+

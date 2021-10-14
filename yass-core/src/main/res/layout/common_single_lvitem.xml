@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_indexstatus_dialog"
+              style="@style/lv_bg_item"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal">
+
+    <!-- 对字号颜色做了处理  手动修改指标值2018年12月13日14:07:23-->
+    <TextView
+        android:id="@+id/common_single_tv_lvitem"
+        style="@style/dialog_text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_weight="1.0"
+        android:gravity="left"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/font_size5"/>
+
+    <!-- 隐藏处理  手动修改指标值2018年12月13日14:07:23-->
+    <RadioButton
+        android:id="@+id/common_single_rb_lvitem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center_vertical"
+        android:visibility="invisible"/>
+
+</LinearLayout>

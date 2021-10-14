@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../DBT_Cxy.iml" filepath="$PROJECT_DIR$/../DBT_Cxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../app/app.iml" filepath="$PROJECT_DIR$/../app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../calendarview/calendarview.iml" filepath="$PROJECT_DIR$/../calendarview/calendarview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yass-core.iml" filepath="$PROJECT_DIR$/yass-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../yass-res/yass-res.iml" filepath="$PROJECT_DIR$/../yass-res/yass-res.iml" />
+    </modules>
+  </component>
+</project>
