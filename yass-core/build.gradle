@@ -56,7 +56,7 @@ dependencies {
     compile 'com.alibaba:fastjson:1.1.71.android'
 
     // 拼音处理
-    compile 'com.github.SilenceDut:jpinyin:v1.0'
+    // compile 'com.github.SilenceDut:jpinyin:v1.0'
 
     // java类补充库(适配6.0)
     implementation files('libs/commons-lang-2.6.jar')
