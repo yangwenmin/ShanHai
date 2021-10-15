@@ -1,5 +1,6 @@
 package com.shanhai;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -8,6 +9,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -15,8 +17,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
+import com.core.utils.dbtutil.PrefUtils;
 import com.core.utils.flyn.Eyes;
 import com.shanhai.application.ConstValues;
 import com.shanhai.base.BaseActivity;
@@ -37,10 +41,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             .centerCrop() // 裁剪图片将imageView填满
             .bitmapTransform(new RoundedCorners(18));
 
+    private static final RequestOptions BANNER_OPTIONS2 = new RequestOptions()
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .dontAnimate()
+            .centerCrop().placeholder(R.drawable.ic_launcher);
+
     private RelativeLayout backBtn;
     private RelativeLayout confirmBtn;
     private AppCompatTextView confirmTv;
-    private AppCompatTextView backTv;
+    private ImageView headphotoImg;
+    private AppCompatTextView username;
     private AppCompatTextView titleTv;
 
     private ImageView img_video;
@@ -56,6 +66,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private DownloadService service;
     private MyHandler handler;
     private Random rand;
+    private String headPhoto;
 
 
     /**
@@ -97,9 +108,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
 
 
-
-
-
         // 标题栏白底黑字
         Eyes.setStatusBarLightMode(this, Color.WHITE);
 
@@ -112,11 +120,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     // 初始化视图
     private void initView() {
 
-        backBtn = (RelativeLayout) findViewById(R.id.top_navigation_rl_back);
-        confirmBtn = (RelativeLayout) findViewById(R.id.top_navigation_rl_confirm);
-        confirmTv = (AppCompatTextView) findViewById(R.id.top_navigation_bt_confirm);
-        backTv = (AppCompatTextView) findViewById(R.id.top_navigation_bt_back);
-        titleTv = (AppCompatTextView) findViewById(R.id.top_navigation_tv_title);
+        backBtn = (RelativeLayout) findViewById(R.id.main_rl_back);
+        headphotoImg = (ImageView) findViewById(R.id.main_img_headphoto);
+        username = (AppCompatTextView) findViewById(R.id.main_tv_username);
+        confirmBtn = (RelativeLayout) findViewById(R.id.main_rl_confirm);
+        confirmTv = (AppCompatTextView) findViewById(R.id.main_bt_confirm);
+        titleTv = (AppCompatTextView) findViewById(R.id.main_tv_title);
 
         backBtn.setVisibility(View.VISIBLE);
         confirmBtn.setVisibility(View.INVISIBLE);
@@ -153,16 +162,30 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         titleTv.setText("王者小知识");
 
+        // 显示用户名
+        String name = PrefUtils.getString(MainActivity.this,ConstValues.HTTPHEAD, "http://192.168.31.128:8080/");
+        if(ConstValues.HTTPHEAD_HOME.equals(name)){
+            username.setText("Home");
+        }else{
+            username.setText("Mac");
+        }
 
-        backTv.setBackground(getResources().getDrawable(R.drawable.ic_launcher1));
+
+        // 头像
+        int ab = rand.nextInt(ConstValues.videoUrlList.length);
+        // headPhoto = ConstValues.videoUrlList[ab];
+        headPhoto = ConstValues.HEADPHOTO;
+
+        Glide.with(MainActivity.this)
+                .load(headPhoto)
+                .apply(BANNER_OPTIONS2)
+                .into(headphotoImg);
 
         Glide.with(MainActivity.this)
                 .setDefaultRequestOptions(BANNER_OPTIONS)
                 // .load(ConstValues.homeImageList[rand.nextInt(ConstValues.homeImageList.length)])
                 .load(ConstValues.homeImageList[0])
                 .into(img_video);
-
-
 
         Glide.with(MainActivity.this)
                 .setDefaultRequestOptions(BANNER_OPTIONS)
@@ -185,9 +208,55 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
 
+    private Dialog dialog;
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.main_rl_back:// 头像
+                if (ViewUtil.isDoubleClick(v.getId(), 800))
+                    return;
+
+                // 设置http
+                String name = username.getText().toString();
+                if("Mac".equals(name)){
+                    username.setText("Home");
+                    PrefUtils.putString(MainActivity.this,ConstValues.HTTPHEAD, ConstValues.HTTPHEAD_HOME);
+                }else{
+                    username.setText("Mac");
+                    PrefUtils.putString(MainActivity.this,ConstValues.HTTPHEAD, ConstValues.HTTPHEAD_MAC);
+                }
+
+                dialog = new Dialog(MainActivity.this, R.style.edit_AlertDialog_style);
+                dialog.setContentView(R.layout.dialog_bigimage);
+                ImageView imageView = (ImageView) dialog.findViewById(R.id.my_image);
+
+                //选择true的话点击其他地方可以使dialog消失，为false的话不会消失
+                dialog.setCanceledOnTouchOutside(true);
+
+                Window w = dialog.getWindow();
+                WindowManager.LayoutParams lp = w.getAttributes();
+                lp.x = 0;
+                lp.y = 40;
+                dialog.onWindowAttributesChanged(lp);
+
+                Glide.with(MainActivity.this)
+                        .load(headPhoto)
+                        .apply(BANNER_OPTIONS2)
+                        .into(imageView);
+
+                //大图的点击事件（点击让他消失）
+                imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
+
+                break;
+
             case R.id.main_tv_video:// 视频
                 if (ViewUtil.isDoubleClick(v.getId(), 2500))
                     return;

@@ -17,6 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.core.utils.dbtutil.FileUtil;
+import com.core.utils.dbtutil.PrefUtils;
 import com.core.utils.flyn.Eyes;
 import com.shanhai.DownloadService;
 import com.shanhai.R;
@@ -60,6 +61,7 @@ public class VideoListActivity extends BaseActivity implements View.OnClickListe
 
     // 上一页传递过来的名称
     private String name;
+
 
 
     /**
@@ -136,6 +138,8 @@ public class VideoListActivity extends BaseActivity implements View.OnClickListe
         service = new DownloadService(VideoListActivity.this, handler);
 
 
+
+
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         sensorEventListener = new Jzvd.JZAutoFullscreenListener();
 
@@ -161,7 +165,7 @@ public class VideoListActivity extends BaseActivity implements View.OnClickListe
                 // 将字符串分割成数组
                 String[] read = ShanHaiUtil.splitStringToArray(result);
                 // 将字符串数组转成视频对象集合
-                final ArrayList<VideoStc> videoStcs = ShanHaiUtil.getVideoListByVideoArray(name, read);
+                final ArrayList<VideoStc> videoStcs = ShanHaiUtil.getVideoListByVideoArray(ShanHaiUtil.getHttpid(this) ,name, read);
 
                 if (videoStcs != null && videoStcs.size() > 0) {
 
@@ -226,7 +230,7 @@ public class VideoListActivity extends BaseActivity implements View.OnClickListe
     //发起下载文件的请求
     private void sendDownRequest() {
         // 请求
-        service.downloadText(ConstValues.HTTPID + ConstValues.VIDEOPATH + name + "/" + ConstValues.TXTNAME,// 请求url
+        service.downloadText(ShanHaiUtil.getHttpid(this) + ConstValues.VIDEOPATH + name + "/" + ConstValues.TXTNAME,// 请求url
                 fileName,// 本地存储名称
                 ConstValues.WAIT0);// handle回调接收
 

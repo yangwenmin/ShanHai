@@ -11,8 +11,10 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 
+import com.core.utils.dbtutil.PrefUtils;
 import com.shanhai.R;
 import com.shanhai.application.ConstValues;
+import com.shanhai.func_video.VideoCategoryActivity;
 import com.shanhai.func_video.domain.CategoryStc;
 import com.shanhai.func_video.domain.VideoStc;
 
@@ -43,15 +45,22 @@ public class ShanHaiUtil {
         FileInputStream fin = new FileInputStream(docFile);
         fin.read(buff);
         fin.close();
-        String result;
-        if ("HOME".equals(ConstValues.SERVICE)) {
-            result = new String(buff, "GB2312");
-        } else {
-            result = new String(buff, "UTF-8");
+        String result = new String(buff, "GB2312");
+        if (result != null) {
+            // 判断是否是乱码
+            if (!(java.nio.charset.Charset.forName("GBK").newEncoder().canEncode(result))) {
+                try {
+                    result = new String(buff, "UTF-8");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         }
 
         return result;
     }
+
+
 
     /**
      * 将字符串分割成数组
@@ -121,7 +130,7 @@ public class ShanHaiUtil {
      * @param readResult
      * @return
      */
-    public static ArrayList<VideoStc> getVideoListByVideoArray(String categoryname, String[] readResult) {
+    public static ArrayList<VideoStc> getVideoListByVideoArray(String httphead,String categoryname, String[] readResult) {
 
         Random rand = new Random();
         int ab = rand.nextInt(randstart);
@@ -146,7 +155,7 @@ public class ShanHaiUtil {
 
             stc = new VideoStc();
             if (!(s.contains("_list") || s.contains("_LIST") || s.contains("双击提取文件夹中文件名") || s.contains("新建文件夹"))) {
-                stc.setVideourl(ConstValues.HTTPID + ConstValues.VIDEOPATH + categoryname + "/" + s);
+                stc.setVideourl(httphead + ConstValues.VIDEOPATH + categoryname + "/" + s);
                 stc.setVideoname(s);
                 int sel = (ab + i) >= ConstValues.videoUrlList.length ? rand.nextInt(ConstValues.videoUrlList.length) : (ab + i);
                 stc.setImageurl(ConstValues.videoUrlList[sel]);
@@ -155,6 +164,13 @@ public class ShanHaiUtil {
         }
 
         return videoStcs;
+    }
+
+
+
+    public static  String getHttpid(Context context){
+        // 获取链接的头部 默认Home
+        return PrefUtils.getString(context, ConstValues.HTTPHEAD, ConstValues.HTTPHEAD_HOME);
     }
 
 

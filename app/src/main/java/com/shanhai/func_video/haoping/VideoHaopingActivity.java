@@ -190,7 +190,7 @@ public class VideoHaopingActivity extends BaseActivity implements View.OnClickLi
                                 String[] listread = ShanHaiUtil.splitStringToArray(listresult);
 
                                 // 第二步: 获取该分类下的所有视频 将字符串数组转成视频对象集合
-                                final ArrayList<VideoStc> allVideo = ShanHaiUtil.getVideoListByVideoArray(categoryname, listread);
+                                final ArrayList<VideoStc> allVideo = ShanHaiUtil.getVideoListByVideoArray(ShanHaiUtil.getHttpid(this) ,categoryname, listread);
 
                                 // 第三步: 从该分类的所有视频随机获取一个
                                 if (allVideo != null && allVideo.size() > 0) {

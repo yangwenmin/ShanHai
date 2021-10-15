@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
@@ -7,7 +8,90 @@
               android:orientation="vertical"
               tools:context=".MainActivity">
 
-    <include layout="@layout/top_navigation"/>
+
+    <LinearLayout
+        android:id="@+id/top_ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <!-- 头像 -->
+        <RelativeLayout
+            android:id="@+id/main_rl_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <!--业代头像-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/main_img_headphoto"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/ic_launcher"
+                app:civ_border_color="@color/color_CD7F32"
+                app:civ_border_width="1dp"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/main_tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:layout_marginLeft="46dp"
+                android:layout_centerVertical="true"
+                android:textSize="12dp"
+                android:textColor="@color/green"/>
+
+        </RelativeLayout>
+
+        <!-- 标题 -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/main_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:lines="1"
+                android:maxLength="15"
+                android:text=""
+                android:textColor="@color/color_555555"
+                android:textSize="18dp"
+                />
+
+        </RelativeLayout>
+
+        <!-- 确定 -->
+        <RelativeLayout
+            android:id="@+id/main_rl_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:visibility="invisible">
+
+            <!-- 删除Button按钮,因为这个按钮会有点击事件  使用TextView没有点击事件 -->
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/main_bt_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:lines="1"
+                android:text=""
+                android:textColor="@color/color_1DB974"
+                android:textSize="18dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
 
     <View
         android:layout_width="match_parent"

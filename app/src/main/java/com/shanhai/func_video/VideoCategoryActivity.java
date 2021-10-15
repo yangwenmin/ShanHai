@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.core.utils.dbtutil.FileUtil;
+import com.core.utils.dbtutil.PrefUtils;
 import com.core.utils.flyn.Eyes;
 import com.shanhai.DownloadService;
 import com.shanhai.R;
@@ -142,6 +143,7 @@ public class VideoCategoryActivity extends BaseActivity implements View.OnClickL
         handler = new MyHandler(VideoCategoryActivity.this);
         service = new DownloadService(VideoCategoryActivity.this, handler);
 
+
         // 获取上一页传递过来的数据
         Intent i = getIntent();
         title = i.getStringExtra("title");
@@ -214,7 +216,7 @@ public class VideoCategoryActivity extends BaseActivity implements View.OnClickL
                             String fileName = categoryStc.getCategoryname() + ConstValues.TXTNAME;//
 
                             // 请求
-                            service.downloadText(ConstValues.HTTPID + ConstValues.VIDEOPATH + categoryStc.getCategoryname() + "/" + ConstValues.TXTNAME,// 请求url
+                            service.downloadText(ShanHaiUtil.getHttpid(VideoCategoryActivity.this) + ConstValues.VIDEOPATH + categoryStc.getCategoryname() + "/" + ConstValues.TXTNAME,// 请求url
                                     fileName, // 本地存储名称
                                     false, // false不显示进度框,true显示进度框
                                     ConstValues.WAIT1);// 当前页面handle回调接收
@@ -263,7 +265,7 @@ public class VideoCategoryActivity extends BaseActivity implements View.OnClickL
     }
 
     private void getJsonFile() {
-        service.getJsonWorks(ConstValues.HTTPID + ConstValues.VIDEOPATH + ConstValues.TXTNAME);// 本页面handle需要用0接收
+        service.getJsonWorks(ShanHaiUtil.getHttpid(VideoCategoryActivity.this) + ConstValues.VIDEOPATH + ConstValues.TXTNAME);// 本页面handle需要用0接收
     }
 
     // ----↓ 下载文件 ↓——————————————————————————————————————————------------------------------------------
@@ -271,7 +273,7 @@ public class VideoCategoryActivity extends BaseActivity implements View.OnClickL
     // 若是当前页第一次请求 则开始下载文件
     private void downloadFile() {
         //发起下载文件的请求
-        service.downloadText(ConstValues.HTTPID + ConstValues.VIDEOPATH + ConstValues.TXTNAME, // 请求url
+        service.downloadText(ShanHaiUtil.getHttpid(VideoCategoryActivity.this) + ConstValues.VIDEOPATH + ConstValues.TXTNAME, // 请求url
                 ConstValues.TXTNAME,// 保存本地文件名称 name_LIST.TXT
                 ConstValues.WAIT0);// 本页面handle需要用0接收
 

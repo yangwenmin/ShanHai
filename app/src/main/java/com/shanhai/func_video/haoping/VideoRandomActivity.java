@@ -191,7 +191,7 @@ public class VideoRandomActivity extends BaseActivity implements View.OnClickLis
                                 String[] listread = ShanHaiUtil.splitStringToArray(listresult);
 
                                 // 第二步: 获取该分类下的所有视频 将字符串数组转成视频对象集合
-                                final ArrayList<VideoStc> allVideo = ShanHaiUtil.getVideoListByVideoArray(categoryname, listread);
+                                final ArrayList<VideoStc> allVideo = ShanHaiUtil.getVideoListByVideoArray(ShanHaiUtil.getHttpid(this), categoryname, listread);
 
                                 // 第三步: 从该分类的所有视频随机获取一个
                                 if (allVideo != null && allVideo.size() > 0) {
@@ -214,7 +214,7 @@ public class VideoRandomActivity extends BaseActivity implements View.OnClickLis
                 }
                 if (videoStcs != null && videoStcs.size() > 0) {
 
-                    listView.setAdapter(new VideoRandomAdapter(this,videoStcs));
+                    listView.setAdapter(new VideoRandomAdapter(this, videoStcs));
 
 
                     listView.setOnScrollListener(new AbsListView.OnScrollListener() {

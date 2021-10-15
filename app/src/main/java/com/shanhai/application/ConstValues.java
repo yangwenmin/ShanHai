@@ -15,18 +15,18 @@ public class ConstValues extends InitValues {
     public static final String txturl = "https://wxyass-com.oss-cn-beijing.aliyuncs.com/cache/%E7%95%85%E4%BA%AB%E6%AC%A2%E8%81%9A%E6%97%B6%E5%88%BB.txt";
 
 
-    // HOME
-    public static final String HTTPID = "http://192.168.31.128:8080/";
-    public static final String SERVICE = "HOME";
-    public static final String LOCALPATH = "AiMee/Android/data/localpath";// 下载文件的存放位置
+    // 头像
+    // public static final String HEADPHOTO = "https://z3.ax1x.com/2021/10/14/5MgrJs.png";
+    public static final String HEADPHOTO = "https://wx1.sinaimg.cn/mw2000/8e73021fgy1gowa22g4bej21o02801ky.jpg";
 
-    // Mac
-    // public static final String HTTPID = "http://192.168.0.180:8080/";
-    // public static final String SERVICE = "MAC";
-    // public static final String LOCALPATH = "AiMee/Android/data/macpath";// 下载文件的存放位置
+
+    public static final String HTTPHEAD = "httphead";
+    public static final String HTTPHEAD_MAC = "http://192.168.31.128:8080/";
+    public static final String HTTPHEAD_HOME = "http://192.168.0.180:8080/";
 
     public static final String VIDEOPATH = "landking/video/";
     public static final String TXTNAME = "_LIST.TXT";//
+    public static final String LOCALPATH = "AiMee/Android/data/localpath";// 下载文件的存放位置
 
 
 
