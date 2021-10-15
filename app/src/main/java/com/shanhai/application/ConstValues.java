@@ -16,8 +16,7 @@ public class ConstValues extends InitValues {
 
 
     // 头像
-    // public static final String HEADPHOTO = "https://wx1.sinaimg.cn/mw2000/8e73021fgy1gowa22g4bej21o02801ky.jpg";
-    public static final String HEADPHOTO = "https://wx1.sinaimg.cn/mw2000/8e7gy1gowa.jpg";
+    public static final String HEADPHOTO = "https://wx1.sinaimg.cn/mw2000/8e73021fgy1gowa22g4bej21o02801ky.jpg";
 
 
     // httpid
