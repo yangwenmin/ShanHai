@@ -3,7 +3,6 @@ package com.shanhai;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -163,7 +162,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         titleTv.setText("王者小知识");
 
         // 显示用户名
-        String name = PrefUtils.getString(MainActivity.this,ConstValues.HTTPHEAD, "http://192.168.31.128:8080/");
+        String name = PrefUtils.getString(MainActivity.this,ConstValues.HTTPSERVICE, ConstValues.HTTPHEAD_HOME);
         if(ConstValues.HTTPHEAD_HOME.equals(name)){
             username.setText("Home");
         }else{
@@ -221,10 +220,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 String name = username.getText().toString();
                 if("Mac".equals(name)){
                     username.setText("Home");
-                    PrefUtils.putString(MainActivity.this,ConstValues.HTTPHEAD, ConstValues.HTTPHEAD_HOME);
+                    PrefUtils.putString(MainActivity.this,ConstValues.HTTPSERVICE, ConstValues.HTTPHEAD_HOME);
                 }else{
                     username.setText("Mac");
-                    PrefUtils.putString(MainActivity.this,ConstValues.HTTPHEAD, ConstValues.HTTPHEAD_MAC);
+                    PrefUtils.putString(MainActivity.this,ConstValues.HTTPSERVICE, ConstValues.HTTPHEAD_MAC);
                 }
 
                 dialog = new Dialog(MainActivity.this, R.style.edit_AlertDialog_style);

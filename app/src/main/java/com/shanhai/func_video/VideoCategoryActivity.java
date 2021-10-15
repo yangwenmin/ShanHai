@@ -260,13 +260,9 @@ public class VideoCategoryActivity extends BaseActivity implements View.OnClickL
         } else {// 本地不存在
             // 下载文件
             downloadFile();
-            // getJsonFile();
         }
     }
 
-    private void getJsonFile() {
-        service.getJsonWorks(ShanHaiUtil.getHttpid(VideoCategoryActivity.this) + ConstValues.VIDEOPATH + ConstValues.TXTNAME);// 本页面handle需要用0接收
-    }
 
     // ----↓ 下载文件 ↓——————————————————————————————————————————------------------------------------------
 

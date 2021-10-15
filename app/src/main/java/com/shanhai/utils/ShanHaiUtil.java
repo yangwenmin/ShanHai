@@ -1,20 +1,9 @@
 package com.shanhai.utils;
 
-import android.app.Activity;
 import android.content.Context;
-import android.os.Environment;
-import android.text.TextUtils;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.RadioGroup;
 
 import com.core.utils.dbtutil.PrefUtils;
-import com.shanhai.R;
 import com.shanhai.application.ConstValues;
-import com.shanhai.func_video.VideoCategoryActivity;
 import com.shanhai.func_video.domain.CategoryStc;
 import com.shanhai.func_video.domain.VideoStc;
 
@@ -170,7 +159,7 @@ public class ShanHaiUtil {
 
     public static  String getHttpid(Context context){
         // 获取链接的头部 默认Home
-        return PrefUtils.getString(context, ConstValues.HTTPHEAD, ConstValues.HTTPHEAD_HOME);
+        return PrefUtils.getString(context, ConstValues.HTTPSERVICE, ConstValues.HTTPHEAD_HOME);
     }
 
 

@@ -16,18 +16,17 @@ public class ConstValues extends InitValues {
 
 
     // 头像
-    // public static final String HEADPHOTO = "https://z3.ax1x.com/2021/10/14/5MgrJs.png";
     public static final String HEADPHOTO = "https://wx1.sinaimg.cn/mw2000/8e73021fgy1gowa22g4bej21o02801ky.jpg";
 
 
-    public static final String HTTPHEAD = "httphead";
-    public static final String HTTPHEAD_MAC = "http://192.168.31.128:8080/";
-    public static final String HTTPHEAD_HOME = "http://192.168.0.180:8080/";
+    // httpid
+    public static final String HTTPSERVICE = "httpservice";
+    public static final String HTTPHEAD_HOME = "http://192.168.31.128:8080/";
+    public static final String HTTPHEAD_MAC = "http://192.168.0.180:8080/";
 
     public static final String VIDEOPATH = "landking/video/";
     public static final String TXTNAME = "_LIST.TXT";//
     public static final String LOCALPATH = "AiMee/Android/data/localpath";// 下载文件的存放位置
-
 
 
     public static String[] homeImageList =
