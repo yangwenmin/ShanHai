@@ -57,7 +57,9 @@ public class VideoCategoryActivity extends BaseActivity implements View.OnClickL
     private MyHandler handler;
 
     // 是否当前页面 第一次发起请求
-    private boolean downCateFile = false;
+    // private boolean downCateFile = false;
+    // 是否下载所有分类目录文件 默认:true  true:需要下载  false:不需要下载
+    private boolean downAllFile;
 
 
     private String title;
@@ -209,8 +211,9 @@ public class VideoCategoryActivity extends BaseActivity implements View.OnClickL
 
                 if (categoryStcs != null && categoryStcs.size() > 0) {
 
-                    // 是否下载所有分类目录
-                    if (downCateFile) {
+                    // 是否下载所有分类目录文件 默认:true  true:需要下载  false:不需要下载
+                    downAllFile = PrefUtils.getBoolean(VideoCategoryActivity.this, ConstValues.DOWNALLFILE, true);
+                    if (downAllFile) {
                         for (CategoryStc categoryStc : categoryStcs) {
                             // 存储本地文件名称
                             String fileName = categoryStc.getCategoryname() + ConstValues.TXTNAME;//
@@ -221,6 +224,8 @@ public class VideoCategoryActivity extends BaseActivity implements View.OnClickL
                                     false, // false不显示进度框,true显示进度框
                                     ConstValues.WAIT1);// 当前页面handle回调接收
                         }
+                        // 设置不需要下载所有分类目录文件  true:需要下载  false:不需要下载
+                        PrefUtils.putBoolean(VideoCategoryActivity.this, ConstValues.DOWNALLFILE, false);
                     }
 
                     categoryStcs.add(0, new CategoryStc("大众好评", ConstValues.videoUrlList[rand.nextInt(ConstValues.videoUrlList.length)]));
@@ -316,7 +321,8 @@ public class VideoCategoryActivity extends BaseActivity implements View.OnClickL
                 File docFile = new File(Environment.getExternalStorageDirectory().getPath() + "/" + ConstValues.LOCALPATH);
                 FileUtil.deleteFile(docFile);
 
-                downCateFile = true;
+                // 设置不需要下载所有分类目录文件  true:需要下载  false:不需要下载
+                PrefUtils.putBoolean(VideoCategoryActivity.this, ConstValues.DOWNALLFILE, true);
 
                 //发起下载文件的请求
                 downloadFile();

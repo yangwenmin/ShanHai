@@ -1,6 +1,7 @@
 package com.shanhai.application;
 
 import com.core.initbase.InitValues;
+import com.core.utils.dbtutil.PrefUtils;
 
 
 /**
@@ -18,15 +19,18 @@ public class ConstValues extends InitValues {
     // 头像
     public static final String HEADPHOTO = "https://wx1.sinaimg.cn/mw2000/8e73021fgy1gowa22g4bej21o02801ky.jpg";
 
-
-    // httpid
-    public static final String HTTPSERVICE = "httpservice";
+    // 访问ip
     public static final String HTTPHEAD_HOME = "http://192.168.31.128:8080/";
     public static final String HTTPHEAD_MAC = "http://192.168.0.180:8080/";
 
     public static final String VIDEOPATH = "landking/video/";
     public static final String TXTNAME = "_LIST.TXT";//
     public static final String LOCALPATH = "AiMee/Android/data/localpath";// 下载文件的存放位置
+
+
+    // PrefUtils tag
+    public static final String HTTPSERVICE = "httpservice";// httpid
+    public static final String DOWNALLFILE = "downallfile";// 下载所有文件
 
 
     public static String[] homeImageList =
